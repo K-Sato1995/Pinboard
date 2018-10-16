@@ -1,0 +1,68 @@
+<div id = "left-content">
+  <% if user_signed_in? %>
+    <%= link_to (image_tag current_user.avatar, id:"index_user_img"), user_path(current_user.id)%>
+    <h3><%= link_to current_user.nickname,user_path(@user),id:"index_user_name"%></h3>
+    <hr>
+  <% else %>
+    <%= image_tag "users.png",id:"index_user_img" %>
+    <h3>Guest</h3><hr>
+  <% end %>
+  <div id="tag_cloud">
+      <h1>Tags</h1>
+      <ul>
+        <% tag_cloud Pin.tag_counts, %w[s m l] do |tag, css_class|%>
+          <li><%= link_to tag.name,tag_path(tag.name),class:"tag"%></li>
+        <% end %>
+      </ul>
+  </div>
+</div>
+
+<div class ="container2">
+  <div id="pins" class="transitions-enabled">
+     <% @pins.each do |pin| %>
+       <div class="box">
+         <div class= "panel panel-default">
+            <%= link_to (image_tag pin.image ,class:"image"), pin_path(pin.id)%>
+          </div>
+        </div>
+      <% end %>
+      <%= paginate(@pins) %>
+  </div>
+    <nav id="page-nav">
+      <a href="../pages/2.html"></a>
+    </nav>
+</div>
+
+<script>
+  $(function(){
+  var $container = $('#pins');
+  $container.imagesLoaded(function(){
+    $container.masonry({
+      itemSelector: '.box',
+      columnWidth: 100
+    });
+  });
+
+  $container.infinitescroll({
+    navSelector  : '#page-nav',    // selector for the paged navigation
+    nextSelector : '#page-nav a',  // selector for the NEXT link (to page 2)
+    itemSelector : '.box',     // selector for all items you'll retrieve
+    loading: {
+        finishedMsg: 'No more pages to load.',
+        img: 'http://i.imgur.com/6RMhx.gif'
+      }
+    },
+    // trigger Masonry as a callback
+    function( newElements ) {
+      // hide new items while they are loading
+      var $newElems = $( newElements ).css({ opacity: 0 });
+      // ensure that images load before adding to masonry layout
+      $newElems.imagesLoaded(function(){
+        // show elems now they're ready
+        $newElems.animate({ opacity: 1 });
+        $container.masonry( 'appended', $newElems, true );
+      });
+    }
+  );
+});
+</script>

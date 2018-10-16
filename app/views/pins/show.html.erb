@@ -1,0 +1,63 @@
+<div id="pin_show">
+  <div class="row">
+    <div class ="col-md-6 col-md-offset-3">
+      <div class= "panel panel-default">
+        <div class ="panel-heading pin_image">
+          <%= image_tag @pin.image %>
+        </div>
+        <div class ="panel-body">
+            <h3><%= @pin.title%></h3>
+            <p id ="p"><%= @pin.description%></p>
+        </div>
+        <div class ="pannel-footer">
+            <div class="row">
+              <div class ="col-md-5">
+                <p><%=link_to @pin.user.nickname, user_path(@pin.user.id) ,class:"submit_user",id:"user_name"%></p>
+              </div>
+                <div class ="col-md-7">
+                 <div class="btn-group pull-right">
+                    <%= link_to like_pin_path(@pin),method: :put ,class: "btn" ,id:"like-letter" do %>
+                      <i class="fa fa-heart-o" aria-hidden="true"></i> like
+                      <%= @pin.get_upvotes.size%>
+                      <% end %>
+                    <h3 class= "btn" id = "button"><i class="fa fa-comment-o" aria-hidden="true"></i> Comments <%= @pin.comments.size%></h3>
+                     <% if user_signed_in? && current_user.id == @pin.user_id %>
+                      <button class="btn  btn-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <%= link_to 'Edit', edit_pin_path(@pin) %><br/></button>
+                      <button class="btn  btn-link"><i class="fa fa-trash-o" aria-hidden="true"></i> <%= link_to 'Destroy',pin_path, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+                    <% end %>
+                  </div>
+                </div>
+            </div>
+        </div>
+    <hr>
+        <div class="comments">
+          <% if @comments %>
+            <% @comments.each do |comment| %>
+              <p>
+                <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" ,class:"user_name"%>：</strong>
+                <%= comment.text %>
+              </p>
+            <% end %>
+          <% end %>
+        </div>
+        <% if current_user %>
+          <%= form_tag("/pins/#{@pin.id}/comments", method: :post) do %>
+            <textarea cols="30" name="text" placeholder="Comment" rows="2" class = "textarea"></textarea>
+            <input type="submit" value="SEND" id = "input">
+          <% end %>
+        <% end %>
+    </div>
+</div>
+
+<script>
+    var s = $('.textarea,.comments,#input,hr')
+    var btn = $('#button')
+
+    $(document).ready(function(){
+
+    $(s).hide();
+    });
+    $(btn).click(function(){
+       $(s).slideDown(2000);
+    });
+</script>

@@ -1,0 +1,85 @@
+        <div id ="user_page">
+            <div class = "user_info">
+                <div id = "user_img_frame">
+                    <%if @user.avatar.present?%>
+                      <%= link_to (image_tag current_user.avatar, id:"user_img"), user_path(current_user.id)%>
+                    <%else%>
+                        <%= image_tag "users.png",id:"user_img"%>
+                    <%end%>
+                </div>
+                <div id ="user-detail">
+                    <h2><%= link_to @user.nickname,user_path(@user),class:"user_name"%></h2>
+                <%if @user.id == current_user.id %>
+                    <h4><i class="fa fa-pencil" aria-hidden="true"></i> <%= link_to "Complete your profile",edit_user_registration_path(current_user.id),class:"go_to_edit"%></h4>
+                <% else %>
+                <% end %>
+                </div>
+            </div>
+            <div class = "tab-panels">
+                    <ul class="tabs">
+                        <li rel ="panel1">Posts(<%= @pins.size%>)</li>
+                        <li rel ="panel2">Likes(<%= @likedpins.size%>)</li>
+                    </ul>
+                <div id="panel1" class="panel active">
+                    <div class ="left-contents" id = "tab-1" data-tab="tab-1">
+                        <%if @pins.present?%>
+                                <% @pins.each do |pin|%>
+                                    <%= link_to (image_tag pin.image ,class:"pic"), pin_path(pin.id)%>
+                                 <% end %>
+                        <%else%>
+                             <div class ="upload">
+                                 <i class="fa fa-cloud-upload fa-5x" aria-hidden="true"></i>
+                                 <h3>Start Uploading Your Dog-Photos to Inuterest</h3>
+                                 <h2><%= link_to"Upload your photos",new_pin_path%></h2>
+                            </div>
+                        <%end%>
+                    </div>
+                </div>
+
+                <div id="panel2" class="panel">
+                    <div class ="left-contents" id = "tab-2" data-tab="tab-2">
+                        <%if @likedpins.present?%>
+                            <% @likedpins.each do |pin|%>
+                                   <%= link_to (image_tag pin.image ,class:"pic"), pin_path(pin.id)%>
+                            <% end %>
+                        <%else%>
+                             <div class ="upload">
+                                 <i class="fa fa-heart  fa-5x" aria-hidden="true"></i>
+                                 <h3>You Haven't Liked Any Photos Yet</h3>
+                                 <h2><a href ="/">Discover new photos</a></h2>
+                            </div>
+                        <%end%>
+                </div>
+            </div>
+        </div>
+
+ <style>
+
+.upload{
+    margin:0 auto;
+    text-align:center;
+    padding-top:30px;
+}
+ </style>
+
+<script>
+ $(document).ready(function (){
+  $('.tab-panels .tabs li').on('click',function(){
+    var panel = $(this).closest('.tab-panels');
+
+    panel.find('.tabs li.active').removeClass('active');
+     $(this).addClass('active');
+     //ここでどのパネルを表示するかの選択。thisはかっこないの選択されたものを意味する。
+    var panelToShow = $(this).attr('rel');
+    //hide current panel 300のあとにあるfunctionはコールバックで前の作業が終了次第その作業を開始する方法。
+    panel.find('.panel.active').slideUp(300, showNextPanel);
+    ////////function Shownext Panel
+    function showNextPanel(){
+        $(this).removeClass('active');
+        $('#'+panelToShow).slideDown(300, function(){
+            $(this).addClass('active');
+});
+}
+});
+});
+</script>

@@ -1,0 +1,338 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *= require font-awesome
+ *= require_tree .
+ *= require_self
+ *= require 'masonry/transitions'
+ */
+ /////////////////////////////////////////////////////////////////////universal
+@import "bootstrap";
+@import "font-awesome";
+$box-shadow: rgba(122, 122, 122, 0.0588235) 0px 0px 6px 3px;
+$a-color:#555555;
+$nav-margin:80px;
+$border: solid 1px #e8e8e8;
+$pcolor:#BD1E23;
+$p2color:#fff;
+$light-border:solid 1px #EFEFEF;
+@mixin test($color){background-color:$color;}
+
+body {background: #f9f9f9;}
+.panel{box-shadow:$box-shadow;}
+h1, h2, h3, h4, h5, h6 {font-weight: bold;}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.navbar {
+	box-shadow:$box-shadow;
+	position:fixed;
+	width:100%;
+	background-color:#fff;
+	z-index: 1;
+	.navbar-brand {
+		a {
+			color: #BD1E23;
+			font-weight: bold;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+.devise_container{
+	margin-top:$nav-margin;
+}
+////////////////////////////////////////////////////////////////////index
+.container{
+	margin-left:15%;
+}
+.container2{
+	margin-left:15%;
+	margin-top:$nav-margin;
+  z-index: 2;
+}
+#pins {
+  margin: 0 auto;
+  width: 90%;
+  .box {
+	  margin: 5px;
+	  width: 370px;
+	  border-radius: 7px;
+	  text-align: center;
+	  img {
+	  	max-width: 100%;
+	  	height: auto;
+	  }
+	  h2 {
+	  	font-size: 22px;
+	  	margin: 0;
+	  	padding: 25px 10px;
+	  	a {
+				color: #474747;
+	  	}
+	  }
+	  .user {
+	  	font-size: 12px;
+	  	border-top: 1px solid #EAEAEA;
+			padding: 15px;
+			margin: 0;
+	  }
+	}
+}
+.go_to_edit{
+  color:$a-color;
+}
+.go_to_edit:hover{
+  text-decoration:none;
+}
+#edit_page {
+	.current_image {
+		img {
+			display: block;
+			margin: 20px 0;
+		}
+	}
+}
+
+.edit_form {
+	margin-top: 80px;
+}
+
+.edit_pin_image {
+	width: 100%;
+}
+
+#pin_show {
+	 margin-top:$nav-margin;
+	.panel-heading {
+		padding: 0;
+	}
+	.pin_image {
+		box-shadow:$box-shadow;
+		img {
+			background-size:cover;
+			max-width: 100%;
+			width: 100%;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	.panel-body {
+		padding: 10px;
+		background-color:#fff;
+		h3 {
+			margin: 0 0 10px 0;
+		}
+		.description {
+			color: #868686;
+			line-height: 1.75;
+			margin: 0;
+		}
+	}
+	.panel-footer {
+		padding: 20px 35px;
+		p {
+			margin: 0;
+		}
+		.user {
+			padding-top: 8px;
+		}
+	}
+}
+.image:hover{
+	  @include opacity(0.7)
+}
+textarea {
+	min-height: 250px;
+}
+#left-content{
+	height:100%;
+  padding-bottom:20px;
+  margin-bottom:20px;
+  margin-top:20px;
+  padding-top:50px;
+  border-right:$light-border;
+  width:15%;
+  float:left;
+	position:fixed;
+	background-color:$p2color;
+#index_user_img{
+	margin-top:20px;
+	margin-left:50px;
+  background-size:cover;
+  border-radius:5%;
+  border:$border;
+  height:120px;
+  width:120px;
+  border-radius:50%;
+  }
+#index_user_name{
+	color:$pcolor;
+	margin-left:20px;
+}
+#index_user_name:hover{
+	color:$a-color;
+	text-decoration:none;
+}
+
+#tag_cloud{
+	margin-left:20px;
+	line-height: 1.2em;
+  font-size:17px;
+  color:$pcolor;
+  h1{
+  	font-size:25px;
+  }
+	ul li{
+		list-style:none;
+		padding-bottom:5px;
+		color:$a-color;
+	}
+	.tag{
+		color:$a-color;
+	}
+ }
+}
+/////////////////User-Show-page
+ .pic{
+  margin:20px 10px 0 10px;
+  height:300px;
+  width:30%;
+ }
+#user_page{
+	width:80%;
+	margin:0 auto;
+	margin-top:80px;
+}
+.user_info{
+	width:100%;
+  height:100%;
+  background-color:#fff;
+  border:$border;
+  margin-bottom:40px;
+ }
+  #user_img_frame{
+	display:inline-block;
+  vertical-align:top;
+	width:25%;
+  }
+#user_img{
+  height:150px;
+  width:150px;
+  margin-top:20px;
+  background-size:cover;
+  border-radius:5%;
+  border:$border;
+  margin-bottom:10px;
+  margin-left:50px;
+  }
+#user-detail{
+  vertical-align:top;
+	display:inline-block;
+	width:60%;
+  }
+  .user_name,#user_name{
+	color:$pcolor;
+}
+ #button{
+   margin:0px;
+ }
+ .textarea{
+  margin:0 auto;
+  width:80%;
+  display:block;
+  border:solid 1px $pcolor;
+  border-radius:5px;
+}
+ .comments{
+  display:block;
+  margin:0 auto;
+  margin-top:20px;
+  width:80%;
+ }
+#input{
+  display:block;
+  margin:0 auto;
+  margin-top:20px;
+  margin-bottom:30px;
+  padding: 5px 40px 5px 40px;
+  color:#ffffff;
+  background-color:$pcolor;
+  border-radius:20px;
+  font-weight:normal;
+}
+.submit_user{
+	color:a-color;
+  margin-left:50px;
+  margin-bottom:-40px;
+  font-weight:bold;
+  font-size:18px;
+}
+
+.panel-body{
+	 width:90%;
+	 display:block;
+	 margin:0 auto;
+  h3{color:a-color;}
+  #p{
+		 	border:solid 1px $pcolor;
+		 	padding:10px 10px 10px 10px;
+    }
+}
+#like-letter{
+	color:black;
+}
+
+///////////////////////////tab
+.tab-panels ul{
+  margin:0;
+  padding:0;
+}
+.tab-panels ul li{
+  list-style-type:none;
+  display:inline-block;
+  background-color:#ffffff;
+  margin:0;
+  padding:3px 10px;
+  width:100px;
+  height:30px;
+  cursor:pointer;
+  border-radius:10px 10px 0 0;
+  box-shadow:$box-shadow;
+  text-align:center;
+  border:$border;
+}
+.tab-panels ul li:hover{
+  background-color:#fff;
+  border-bottom:solid 3px $pcolor;
+}
+
+.tab-panels ul li.active{
+  background-color:#fff;
+  border-bottom:solid 3px $pcolor;
+}
+
+.tab-panels .panel{
+  display:none;
+  padding-bottom:50px;
+	margin-bottom:50px;
+  border-radius:0 0 0px 0px;
+  border:$border;
+}
+.tab-panels .panel.active{
+  display:block;
+  border:$border;
+}

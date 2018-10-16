@@ -1,0 +1,95 @@
+UsersController	/Users/katsuki/Desktop/Rails/Inuterest-master/app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	class	line:1
+show	/Users/katsuki/Desktop/Rails/Inuterest-master/app/controllers/users_controller.rb	/^  def show$/;"	method	line:2	class:UsersController
+edit	/Users/katsuki/Desktop/Rails/Inuterest-master/app/controllers/users_controller.rb	/^  def edit$/;"	method	line:8	class:UsersController
+update	/Users/katsuki/Desktop/Rails/Inuterest-master/app/controllers/users_controller.rb	/^  def update$/;"	method	line:12	class:UsersController
+user_params	/Users/katsuki/Desktop/Rails/Inuterest-master/app/controllers/users_controller.rb	/^  def user_params$/;"	method	line:19	class:UsersController
+ApplicationController	/Users/katsuki/Desktop/Rails/Inuterest-master/app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	class	line:1
+configure_permitted_parameters	/Users/katsuki/Desktop/Rails/Inuterest-master/app/controllers/application_controller.rb	/^  def configure_permitted_parameters$/;"	method	line:5	class:ApplicationController
+AddAttachmentImageToPins	/Users/katsuki/Desktop/Rails/Inuterest-master/db/migrate/20171122035229_add_attachment_image_to_pins.rb	/^class AddAttachmentImageToPins < ActiveRecord::Migration$/;"	class	line:1
+up	/Users/katsuki/Desktop/Rails/Inuterest-master/db/migrate/20171122035229_add_attachment_image_to_pins.rb	/^  def self.up$/;"	singleton method	line:2	class:AddAttachmentImageToPins
+down	/Users/katsuki/Desktop/Rails/Inuterest-master/db/migrate/20171122035229_add_attachment_image_to_pins.rb	/^  def self.down$/;"	singleton method	line:8	class:AddAttachmentImageToPins
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^ * Any CSS and SCSS file within this directory, lib\/assets\/stylesheets, vendor\/assets\/stylesheets,$/;"	function	line:5
+box-shadow	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^$box-shadow: rgba(122, 122, 122, 0.0588235) 0px 0px 6px 3px;$/;"	function	line:20
+a-color	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^$a-color:#555555;$/;"	function	line:21
+nav-margin	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^$nav-margin:80px;$/;"	function	line:22
+border	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^$border: solid 1px #e8e8e8;$/;"	function	line:23
+pcolor	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^$pcolor:#BD1E23;$/;"	function	line:24
+p2color	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^$p2color:#fff;$/;"	function	line:25
+light-border	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^$light-border:solid 1px #EFEFEF;$/;"	function	line:26
+@mixin test($color)	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^@mixin test($color){background-color:$color;}$/;"	function	line:27
+body	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^body {background: #f9f9f9;}$/;"	function	line:29
+.panel	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.panel{box-shadow:$box-shadow;}$/;"	function	line:30
+h1, h2, h3, h4, h5, h6	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^h1, h2, h3, h4, h5, h6 {font-weight: bold;}$/;"	function	line:31
+.clearfix::after	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.clearfix::after {$/;"	function	line:33
+.navbar	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.navbar {$/;"	function	line:39
+.navbar-brand	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^	.navbar-brand {$/;"	function	line:45
+a	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^		a {$/;"	function	line:46
+&:hover	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^			&:hover {$/;"	function	line:49
+.devise_container	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.devise_container{$/;"	function	line:55
+.container	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.container{$/;"	function	line:59
+.container2	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.container2{$/;"	function	line:62
+#pins	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^#pins {$/;"	function	line:67
+.box	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^  .box {$/;"	function	line:70
+img	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^	  img {$/;"	function	line:75
+h2	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^	  h2 {$/;"	function	line:79
+a	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^	  	a {$/;"	function	line:83
+.user	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^	  .user {$/;"	function	line:87
+.go_to_edit	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.go_to_edit{$/;"	function	line:95
+.go_to_edit:hover	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.go_to_edit:hover{$/;"	function	line:98
+#edit_page	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^#edit_page {$/;"	function	line:101
+.current_image	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^	.current_image {$/;"	function	line:102
+img	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^		img {$/;"	function	line:103
+.edit_form	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.edit_form {$/;"	function	line:110
+.edit_pin_image	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.edit_pin_image {$/;"	function	line:114
+#pin_show	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^#pin_show {$/;"	function	line:118
+.panel-heading	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^	.panel-heading {$/;"	function	line:120
+.pin_image	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^	.pin_image {$/;"	function	line:123
+img	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^		img {$/;"	function	line:125
+.panel-body	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^	.panel-body {$/;"	function	line:133
+h3	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^		h3 {$/;"	function	line:136
+.description	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^		.description {$/;"	function	line:139
+.panel-footer	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^	.panel-footer {$/;"	function	line:145
+p	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^		p {$/;"	function	line:147
+.user	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^		.user {$/;"	function	line:150
+.image:hover	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.image:hover{$/;"	function	line:155
+textarea	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^textarea {$/;"	function	line:158
+#left-content	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^#left-content{$/;"	function	line:161
+#index_user_img	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^#index_user_img{$/;"	function	line:172
+#index_user_name	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^#index_user_name{$/;"	function	line:182
+#index_user_name:hover	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^#index_user_name:hover{$/;"	function	line:186
+#tag_cloud	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^#tag_cloud{$/;"	function	line:191
+h1	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^  h1{$/;"	function	line:196
+ul li	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^	ul li{$/;"	function	line:199
+.tag	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^	.tag{$/;"	function	line:204
+.pic	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^ .pic{$/;"	function	line:210
+#user_page	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^#user_page{$/;"	function	line:215
+.user_info	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.user_info{$/;"	function	line:220
+#user_img_frame	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^  #user_img_frame{$/;"	function	line:227
+#user_img	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^#user_img{$/;"	function	line:232
+#user-detail	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^#user-detail{$/;"	function	line:242
+.user_name,#user_name	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^  .user_name,#user_name{$/;"	function	line:247
+#button	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^ #button{$/;"	function	line:250
+.textarea	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^ .textarea{$/;"	function	line:253
+.comments	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^ .comments{$/;"	function	line:260
+#input	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^#input{$/;"	function	line:266
+.submit_user	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.submit_user{$/;"	function	line:277
+.panel-body	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.panel-body{$/;"	function	line:285
+h3	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^  h3{color:a-color;}$/;"	function	line:289
+#p	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^  #p{$/;"	function	line:290
+#like-letter	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^#like-letter{$/;"	function	line:295
+.tab-panels ul	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.tab-panels ul{$/;"	function	line:300
+.tab-panels ul li	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.tab-panels ul li{$/;"	function	line:304
+.tab-panels ul li:hover	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.tab-panels ul li:hover{$/;"	function	line:318
+.tab-panels ul li.active	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.tab-panels ul li.active{$/;"	function	line:323
+.tab-panels .panel	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.tab-panels .panel{$/;"	function	line:328
+.tab-panels .panel.active	/Users/katsuki/Desktop/Rails/Inuterest-master/app/assets/stylesheets/application.scss	/^.tab-panels .panel.active{$/;"	function	line:335
+PinsController	/Users/katsuki/Desktop/Rails/Inuterest-master/app/controllers/pins_controller.rb	/^class PinsController < ApplicationController$/;"	class	line:1
+index	/Users/katsuki/Desktop/Rails/Inuterest-master/app/controllers/pins_controller.rb	/^  def index$/;"	method	line:5	class:PinsController
+show	/Users/katsuki/Desktop/Rails/Inuterest-master/app/controllers/pins_controller.rb	/^  def show$/;"	method	line:15	class:PinsController
+new	/Users/katsuki/Desktop/Rails/Inuterest-master/app/controllers/pins_controller.rb	/^  def new$/;"	method	line:19	class:PinsController
+create	/Users/katsuki/Desktop/Rails/Inuterest-master/app/controllers/pins_controller.rb	/^  def create$/;"	method	line:23	class:PinsController
+update	/Users/katsuki/Desktop/Rails/Inuterest-master/app/controllers/pins_controller.rb	/^  def update$/;"	method	line:32	class:PinsController
+destroy	/Users/katsuki/Desktop/Rails/Inuterest-master/app/controllers/pins_controller.rb	/^  def destroy$/;"	method	line:40	class:PinsController
+upvote	/Users/katsuki/Desktop/Rails/Inuterest-master/app/controllers/pins_controller.rb	/^  def upvote$/;"	method	line:45	class:PinsController
+pin_params	/Users/katsuki/Desktop/Rails/Inuterest-master/app/controllers/pins_controller.rb	/^  def pin_params$/;"	method	line:52	class:PinsController
+find_pin	/Users/katsuki/Desktop/Rails/Inuterest-master/app/controllers/pins_controller.rb	/^  def find_pin$/;"	method	line:56	class:PinsController
